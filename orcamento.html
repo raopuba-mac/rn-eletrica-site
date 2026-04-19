@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Orçamento</title>
+
+<style>
+body {font-family:Arial;background:#0f172a;color:#fff;text-align:center;}
+.box {background:#1e293b;padding:20px;border-radius:10px;max-width:400px;margin:auto;}
+select,input {width:100%;padding:10px;margin:10px 0;}
+button {background:#25D366;color:#fff;padding:15px;border:none;width:100%;}
+</style>
+</head>
+
+<body>
+
+<h1>Solicitar Orçamento</h1>
+
+<div class="box">
+
+<select id="servico">
+<option value="150">Instalação elétrica</option>
+<option value="200">QDC</option>
+<option value="180">Câmeras</option>
+<option value="120">Manutenção</option>
+</select>
+
+<input id="qtd" type="number" placeholder="Quantidade">
+
+<h2>Total: R$ <span id="total">0</span></h2>
+
+<button onclick="enviar()">Enviar no WhatsApp</button>
+
+</div>
+
+<script>
+function calc(){
+let s=document.getElementById('servico').value;
+let q=document.getElementById('qtd').value||1;
+let t=s*q;
+document.getElementById('total').innerText=t;
+}
+document.querySelectorAll('select,input').forEach(e=>e.oninput=calc);
+
+function enviar(){
+let serv=document.getElementById('servico').selectedOptions[0].text;
+let qtd=document.getElementById('qtd').value;
+let total=document.getElementById('total').innerText;
+
+let msg=`Olá, quero orçamento:
+Serviço: ${serv}
+Quantidade: ${qtd}
+Total estimado: R$ ${total}`;
+
+window.open("https://wa.me/5534992609206?text="+encodeURIComponent(msg));
+}
+</script>
+
+</body>
+</html>
