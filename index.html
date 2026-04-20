@@ -66,5 +66,23 @@ Atendemos com qualidade e compromisso, garantindo segurança em cada instalaçã
 
 <a class="whats" href="https://wa.me/5534992609206">💬</a>
 
+  <!-- SUA GALERIA AQUI -->
+
+<script>
+function filtrar(tipo) {
+  let itens = document.querySelectorAll('.item');
+
+  itens.forEach(el => {
+    if (tipo === 'all') {
+      el.style.display = 'block';
+    } else {
+      el.style.display = el.classList.contains(tipo) ? 'block' : 'none';
+    }
+  });
+}
+</script>
+
+</body>
+</html>
 </body>
 </html>
