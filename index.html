@@ -29,7 +29,7 @@
 </section>
 
 <!-- SERVIÇOS -->
-<div class="container" id="servicos">
+<div class="container animar" id="servicos">
 <h2>Serviços</h2>
 
 <div class="grid">
@@ -40,8 +40,8 @@
 </div>
 </div>
 
-<!-- GALERIA COM FILTRO -->
-<div class="container" id="galeria">
+<!-- GALERIA -->
+<div class="container animar" id="galeria">
 
 <h2>Projetos realizados</h2>
 
@@ -89,7 +89,7 @@
 </div>
 
 <!-- SOBRE -->
-<div class="container">
+<div class="container animar">
 <h2>Sobre a empresa</h2>
 
 <p class="sobre">
@@ -103,10 +103,10 @@ Atendemos com qualidade e compromisso, garantindo segurança em cada instalaçã
 <p>WhatsApp: (34) 99260-9206</p>
 </footer>
 
-<!-- BOTÃO WHATS FLUTUANTE -->
+<!-- WHATS FIXO -->
 <a class="whats" href="https://wa.me/5534992609206">💬</a>
 
-<!-- SCRIPT DO FILTRO -->
+<!-- SCRIPTS CORRETOS -->
 <script>
 function filtrar(tipo) {
   let itens = document.querySelectorAll('.item');
@@ -119,6 +119,25 @@ function filtrar(tipo) {
     }
   });
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const elementos = document.querySelectorAll('.animar');
+
+  function animarScroll() {
+    const topoTela = window.innerHeight * 0.85;
+
+    elementos.forEach(el => {
+      const topoElemento = el.getBoundingClientRect().top;
+
+      if (topoElemento < topoTela) {
+        el.classList.add('ativo');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', animarScroll);
+  animarScroll();
+});
 </script>
 
 </body>
