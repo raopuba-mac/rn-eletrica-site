@@ -138,3 +138,17 @@ footer{
   text-align:center;
   padding:30px;
 }
+
+button {
+  padding:10px 15px;
+  margin:5px;
+  border:none;
+  border-radius:8px;
+  background:#e2e8f0;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+button:hover {
+  background:#facc15;
+}
