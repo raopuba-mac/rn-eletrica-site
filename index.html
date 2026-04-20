@@ -3,38 +3,130 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RN Elétrica</title>
+<title>RN Elétrica Automação e Segurança</title>
 
 <style>
-body {margin:0;font-family:Arial;background:#0b1220;color:#fff;}
+body {
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#0b1220;
+  color:#fff;
+}
+
+/* HEADER */
+header {
+  background:#020617;
+  padding:15px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo {
+  font-size:20px;
+  font-weight:bold;
+}
+
+/* HERO */
 .hero {
+  background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+  url('https://i.ibb.co/SEUQDC.jpg');
+  background-size:cover;
   padding:80px 20px;
   text-align:center;
 }
+
+.hero h1 {font-size:28px;}
+
 .btn {
   display:inline-block;
   padding:15px;
   margin:10px;
-  background:#25D366;
-  color:white;
-  text-decoration:none;
   border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.btn-whats {background:#25D366;color:#fff;}
+.btn-orc {background:#1e293b;color:#fff;}
+
+/* CONTAINER */
+.container {padding:20px;max-width:1100px;margin:auto;}
+
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:15px;
+}
+
+.card {
+  background:#111827;
+  padding:20px;
+  border-radius:10px;
+}
+
+/* GALERIA */
+.galeria img {
+  width:100%;
+  border-radius:10px;
+}
+
+/* FOOTER */
+footer {
+  text-align:center;
+  padding:20px;
+  background:#020617;
 }
 </style>
 </head>
 
 <body>
 
+<header>
+  <div class="logo">RN Elétrica</div>
+</header>
+
 <section class="hero">
-<h1>RN Elétrica Automação e Segurança</h1>
-<p>Instalações elétricas, câmeras e automação</p>
+<h1>Instalações profissionais com segurança e acabamento impecável</h1>
+<p>Atendimento rápido • Automação • Segurança eletrônica</p>
 
-<a class="btn" href="orcamento.html">Calcular Orçamento</a>
-
-<a class="btn" href="https://wa.me/5534992609206" target="_blank">
-WhatsApp
-</a>
+<a class="btn btn-whats" href="https://wa.me/5534992609206?text=Olá,%20quero%20um%20orçamento">WhatsApp</a>
+<a class="btn btn-orc" href="orcamento.html">Calcular orçamento</a>
 </section>
+
+<div class="container">
+
+<h2>🔧 Serviços</h2>
+<div class="grid">
+  <div class="card">Instalações elétricas</div>
+  <div class="card">Montagem de QDC</div>
+  <div class="card">Automação residencial</div>
+  <div class="card">Câmeras de segurança</div>
+  <div class="card">Interfones e alarmes</div>
+  <div class="card">Manutenção elétrica</div>
+</div>
+
+<h2>📸 Trabalhos realizados</h2>
+<div class="grid galeria">
+  <img src="LINK1">
+  <img src="LINK2">
+  <img src="LINK3">
+  <img src="LINK4">
+</div>
+
+<h2>⭐ Diferenciais</h2>
+<div class="grid">
+  <div class="card">✔ Atendimento rápido</div>
+  <div class="card">✔ Serviço com garantia</div>
+  <div class="card">✔ Preço justo</div>
+  <div class="card">✔ Profissional qualificado</div>
+</div>
+
+</div>
+
+<footer>
+© 2026 RN Elétrica Automação e Segurança
+</footer>
 
 </body>
 </html>
