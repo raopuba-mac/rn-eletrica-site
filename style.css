@@ -1,13 +1,12 @@
-/* RESET */
 *{margin:0;padding:0;box-sizing:border-box;}
 
 body{
   font-family:'Segoe UI',sans-serif;
   background:#f8fafc;
   color:#1e293b;
+  line-height:1.6;
 }
 
-/* HEADER */
 header{
   position:sticky;
   top:0;
@@ -15,26 +14,36 @@ header{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:15px 30px;
-  box-shadow:0 4px 20px rgba(0,0,0,0.08);
+  padding:15px 40px;
+  box-shadow:0 2px 20px rgba(0,0,0,0.06);
   z-index:1000;
 }
 
 header img{height:65px;}
 
 nav a{
-  margin-left:20px;
+  margin-left:25px;
   text-decoration:none;
   color:#1e293b;
   font-weight:600;
+  position:relative;
+}
+
+nav a::after{
+  content:"";
+  position:absolute;
+  bottom:-5px;
+  left:0;
+  width:0;
+  height:2px;
+  background:#facc15;
   transition:0.3s;
 }
 
-nav a:hover{
-  color:#facc15;
+nav a:hover::after{
+  width:100%;
 }
 
-/* HERO */
 .hero{
   height:85vh;
   display:flex;
@@ -48,7 +57,7 @@ nav a:hover{
 }
 
 .hero h1{
-  font-size:44px;
+  font-size:46px;
   color:#facc15;
 }
 
@@ -58,7 +67,6 @@ nav a:hover{
   color:#475569;
 }
 
-/* BOTÕES PREMIUM */
 .btn{
   position:relative;
   display:inline-block;
@@ -75,26 +83,25 @@ nav a:hover{
 .btn-primary{
   background:linear-gradient(45deg,#facc15,#eab308);
   color:#000;
-  box-shadow:0 5px 15px rgba(250,204,21,0.4);
+  box-shadow:0 4px 15px rgba(250,204,21,0.4);
 }
 
 .btn-primary:hover{
-  transform:translateY(-3px) scale(1.05);
-  box-shadow:0 10px 25px rgba(250,204,21,0.6);
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(250,204,21,0.5);
 }
 
 .btn-whats{
   background:linear-gradient(45deg,#25D366,#1ebe5d);
   color:#fff;
-  box-shadow:0 5px 15px rgba(37,211,102,0.4);
+  box-shadow:0 4px 15px rgba(37,211,102,0.4);
 }
 
 .btn-whats:hover{
-  transform:translateY(-3px) scale(1.05);
-  box-shadow:0 10px 25px rgba(37,211,102,0.6);
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(37,211,102,0.5);
 }
 
-/* EFEITO DE LUZ */
 .btn::before{
   content:"";
   position:absolute;
@@ -102,91 +109,78 @@ nav a:hover{
   left:-75%;
   width:50%;
   height:100%;
-  background:rgba(255,255,255,0.4);
+  background:rgba(255,255,255,0.3);
   transform:skewX(-25deg);
   transition:0.5s;
 }
 
 .btn:hover::before{
-  left:125%;
+  left:120%;
 }
 
-.btn:active{
-  transform:scale(0.95);
-}
-
-/* CONTAINER */
 .container{
   max-width:1200px;
   margin:auto;
-  padding:70px 20px;
+  padding:80px 20px;
 }
 
 h2{
   text-align:center;
-  margin-bottom:40px;
-  font-size:28px;
+  margin-bottom:50px;
+  font-size:30px;
 }
 
-/* GRID */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:25px;
+  gap:30px;
 }
 
-/* CARDS */
 .card{
   background:#fff;
   padding:25px;
-  border-radius:15px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  border-radius:18px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.06);
   transition:0.3s;
 }
 
 .card:hover{
-  transform:translateY(-10px);
+  transform:translateY(-8px);
+  box-shadow:0 15px 40px rgba(0,0,0,0.1);
 }
 
-/* GALERIA */
 .galeria img{
   width:100%;
   border-radius:12px;
+  transition:0.4s;
 }
 
-.card p{
-  margin-top:10px;
-  font-weight:500;
+.galeria img:hover{
+  transform:scale(1.06);
 }
 
-/* BOTÕES DE FILTRO */
 button{
-  padding:10px 18px;
+  padding:10px 20px;
   margin:5px;
   border:none;
-  border-radius:20px;
+  border-radius:25px;
   background:#e2e8f0;
   cursor:pointer;
-  font-weight:bold;
-  transition:0.3s;
+  font-weight:600;
 }
 
 button:hover{
   background:#facc15;
-  color:#000;
 }
 
-/* SOBRE */
 .sobre{
   text-align:center;
   max-width:700px;
   margin:auto;
   font-size:18px;
   color:#475569;
-  line-height:1.6;
 }
 
-/* WHATS FIXO */
 .whats{
   position:fixed;
   bottom:20px;
@@ -197,26 +191,22 @@ button:hover{
   border-radius:50%;
   text-decoration:none;
   font-size:20px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 
-/* FOOTER */
 footer{
   background:#1e293b;
   color:#fff;
   text-align:center;
-  padding:40px;
-  margin-top:40px;
+  padding:50px;
 }
 
-/* ANIMAÇÃO BASE */
-.animar {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
+.animar{
+  opacity:0;
+  transform:translateY(40px);
+  transition:all 0.8s ease;
 }
 
-.animar.ativo {
-  opacity: 1;
-  transform: translateY(0);
+.animar.ativo{
+  opacity:1;
+  transform:translateY(0);
 }
