@@ -208,3 +208,15 @@ footer{
   padding:40px;
   margin-top:40px;
 }
+
+/* ANIMAÇÃO BASE */
+.animar {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.animar.ativo {
+  opacity: 1;
+  transform: translateY(0);
+}
