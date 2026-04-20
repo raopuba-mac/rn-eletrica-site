@@ -9,47 +9,52 @@
 <style>
 body {
   margin:0;
-  font-family:Arial, sans-serif;
-  background:#0a0f1c;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background:#0b1220;
   color:#fff;
 }
 
 /* HEADER */
 header {
-  background:#050b18;
-  padding:15px;
-  text-align:center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:25px;
+  background:#020617;
   border-bottom:2px solid #ffc107;
 }
 
 header img {
-  height:60px;
+  height:80px;
 }
 
 /* HERO */
 .hero {
   text-align:center;
-  padding:80px 20px;
+  padding:100px 20px;
 }
 
 .hero h1 {
-  font-size:30px;
+  font-size:34px;
   color:#ffc107;
+  margin-bottom:15px;
 }
 
 .hero p {
   color:#ccc;
-  margin:15px 0;
+  font-size:18px;
 }
 
 /* BOTÕES */
 .btn {
   display:inline-block;
-  padding:15px 20px;
-  margin:10px;
-  border-radius:8px;
+  padding:16px 25px;
+  margin:12px;
+  border-radius:10px;
   text-decoration:none;
   font-weight:bold;
+  font-size:16px;
+  transition:0.3s;
 }
 
 .btn-whats {
@@ -62,37 +67,49 @@ header img {
   color:#000;
 }
 
-/* SERVIÇOS */
+.btn:hover {
+  transform:scale(1.05);
+}
+
+/* CONTAINER */
 .container {
-  padding:20px;
-  max-width:1100px;
+  padding:40px 20px;
+  max-width:1200px;
   margin:auto;
 }
 
+/* GRID */
 .grid {
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:15px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
 }
 
+/* CARDS */
 .card {
   background:#111827;
-  padding:20px;
-  border-radius:10px;
+  padding:25px;
+  border-radius:12px;
   border-left:5px solid #ffc107;
   transition:0.3s;
 }
 
 .card:hover {
-  transform:scale(1.05);
+  transform:translateY(-5px);
+}
+
+/* TITULOS */
+h2 {
+  margin-bottom:20px;
+  color:#ffc107;
 }
 
 /* FOOTER */
 footer {
   text-align:center;
-  padding:20px;
-  background:#050b18;
-  margin-top:30px;
+  padding:25px;
+  background:#020617;
+  margin-top:40px;
 }
 </style>
 </head>
@@ -123,9 +140,17 @@ Calcular orçamento
   <div class="card">Instalações elétricas</div>
   <div class="card">QDC e padrão</div>
   <div class="card">Câmeras de segurança</div>
-  <div class="card">Automação</div>
+  <div class="card">Automação residencial</div>
   <div class="card">Interfone e alarmes</div>
   <div class="card">Manutenção elétrica</div>
+</div>
+
+<h2>⭐ Diferenciais</h2>
+<div class="grid">
+  <div class="card">✔ Atendimento rápido</div>
+  <div class="card">✔ Serviço com garantia</div>
+  <div class="card">✔ Profissional qualificado</div>
+  <div class="card">✔ Preço justo</div>
 </div>
 
 </div>
