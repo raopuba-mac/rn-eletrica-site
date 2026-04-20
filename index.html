@@ -1,96 +1,42 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-<meta charset="UTF-8">
-<title>RN Elétrica</title>
-<link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<header>
-  <img src="logo.png">
-  <nav>
-    <a href="#">Início</a>
-    <a href="#servicos">Serviços</a>
-    <a href="#galeria">Projetos</a>
-    <a href="#contato">Contato</a>
-  </nav>
-</header>
-
-<section class="hero">
-<h1>Eletricista profissional em Pimhuí-MG e Região</h1>
-<p>Instalações seguras, rápidas e com garantia</p>
-
-<a class="btn btn-primary" href="orcamento.html">Solicitar orçamento</a>
-<a class="btn btn-whats" href="https://wa.me/5534992609206">WhatsApp</a>
-</section>
-
-<div class="container" id="servicos">
-
-<h2>Serviços</h2>
-<div class="grid">
-<div class="card">Instalações elétricas</div>
-<div class="card">QDC e padrão</div>
-<div class="card">Câmeras de segurança</div>
-<div class="card">Automação residencial</div>
-</div>
-
-</div>
-
 <div class="container" id="galeria">
 
 <h2>Projetos realizados</h2>
+
+<div style="text-align:center; margin-bottom:20px;">
+  <button onclick="filtrar('all')">Todos</button>
+  <button onclick="filtrar('eletrica')">Elétrica</button>
+  <button onclick="filtrar('cftv')">CFTV</button>
+  <button onclick="filtrar('automacao')">Automação</button>
+  <button onclick="filtrar('redes')">Redes</button>
+</div>
+
 <div class="grid galeria">
-<img src="LINK_DA_SUA_FOTO1">
-<img src="LINK_DA_SUA_FOTO2">
-<img src="LINK_DA_SUA_FOTO3">
-<img src="LINK_DA_SUA_FOTO4">
+
+<div class="card item eletrica">
+<img src="https://images.unsplash.com/photo-1581092335397">
+<p>Instalações elétricas</p>
+</div>
+
+<div class="card item eletrica">
+<img src="https://images.unsplash.com/photo-1621905251918">
+<p>QDC e padrão</p>
+</div>
+
+<div class="card item cftv">
+<img src="https://images.unsplash.com/photo-1581578731548">
+<p>Câmeras de segurança</p>
+</div>
+
+<div class="card item automacao">
+<img src="https://images.unsplash.com/photo-1598300053653">
+<p>Automação residencial</p>
+</div>
+
+<div class="card item redes">
+<img src="https://images.unsplash.com/photo-1558002038-1055907df827">
+<p>Redes e Wi-Fi</p>
 </div>
 
 </div>
 
-<div class="container">
-
-<h2>Sobre a empresa</h2>
-<p class="sobre">
-Atendemos com qualidade e compromisso, garantindo segurança em cada instalação elétrica.
-</p>
-
 </div>
-
-<footer id="contato">
-<p>RN Elétrica Automação e Segurança</p>
-<p>WhatsApp: (34) 99260-9206</p>
-</footer>
-
-<a class="whats" href="https://wa.me/5534992609206">💬</a>
-
-  <!-- SUA GALERIA AQUI -->
-
-<script>
-function filtrar(tipo) {
-  let itens = document.querySelectorAll('.item');
-
-  itens.forEach(el => {
-    if (tipo === 'all') {
-      el.style.display = 'block';
-    } else {
-      el.style.display = el.classList.contains(tipo) ? 'block' : 'none';
-    }
-  });
-}
-</script>
-
-  <a class="btn btn-primary" href="orcamento.html">
-Solicitar orçamento
-</a>
-
-<a class="btn btn-whats" href="https://wa.me/5534992609206">
-WhatsApp
-</a>
-  
-</body>
-</html>
-</body>
-</html>
