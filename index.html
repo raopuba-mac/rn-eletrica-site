@@ -3,40 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>RN Elétrica Automação e Segurança</title>
+
+<!-- SEO -->
+<meta name="description" content="Eletricista profissional em Abaeté. Instalações, câmeras e automação com qualidade e segurança.">
+
+<!-- Favicon -->
+<link rel="icon" href="logo.png">
 
 <style>
 body {
   margin:0;
-  font-family:Arial, sans-serif;
+  font-family:Arial;
   background:#0b1220;
   color:#fff;
 }
 
 /* HEADER */
 header {
-  background:#020617;
-  padding:15px 20px;
   display:flex;
   justify-content:space-between;
   align-items:center;
+  padding:15px 20px;
+  background:#020617;
 }
 
-.logo {
-  font-size:20px;
-  font-weight:bold;
-}
+.logo img {height:45px;}
 
 /* HERO */
 .hero {
-  background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
-  url('https://i.ibb.co/SEUQDC.jpg');
-  background-size:cover;
-  padding:80px 20px;
   text-align:center;
+  padding:80px 20px;
+  background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+  url('https://i.ibb.co/2S3pQ1y/eletrica.jpg');
+  background-size:cover;
+  animation:fade 2s;
 }
 
-.hero h1 {font-size:28px;}
+@keyframes fade {
+  from {opacity:0;transform:translateY(20px);}
+  to {opacity:1;}
+}
 
 .btn {
   display:inline-block;
@@ -47,12 +55,11 @@ header {
   font-weight:bold;
 }
 
-.btn-whats {background:#25D366;color:#fff;}
-.btn-orc {background:#1e293b;color:#fff;}
+.btn-whats {background:#25D366;}
+.btn-orc {background:#1e293b;}
 
-/* CONTAINER */
+/* GRID */
 .container {padding:20px;max-width:1100px;margin:auto;}
-
 .grid {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -63,12 +70,34 @@ header {
   background:#111827;
   padding:20px;
   border-radius:10px;
+  transition:0.3s;
+}
+
+.card:hover {
+  transform:scale(1.05);
 }
 
 /* GALERIA */
 .galeria img {
   width:100%;
   border-radius:10px;
+  transition:0.3s;
+}
+
+.galeria img:hover {
+  transform:scale(1.05);
+}
+
+/* WHATS FIXO */
+.whats-fixo {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  padding:15px;
+  border-radius:50%;
+  font-size:20px;
+  text-decoration:none;
 }
 
 /* FOOTER */
@@ -84,46 +113,50 @@ footer {
 
 <header>
   <div class="logo">
-  <img src="logo.png" style="height:40px;">
-</div>
+    <img src="logo.png">
+  </div>
+</header>
 
 <section class="hero">
-<h1>Instalações profissionais com segurança e acabamento impecável</h1>
-<p>Atendimento rápido • Automação • Segurança eletrônica</p>
+<h1>Instalações elétricas com padrão profissional</h1>
+<p>Atendimento rápido • Segurança • Qualidade garantida</p>
 
-<a class="btn btn-whats" href="https://wa.me/5534992609206?text=Olá,%20quero%20um%20orçamento">WhatsApp</a>
-<a class="btn btn-orc" href="orcamento.html">Calcular orçamento</a>
+<a class="btn btn-whats" href="https://wa.me/5534992609206?text=Olá,%20vim%20pelo%20site%20e%20quero%20um%20orçamento">Solicitar orçamento</a>
+
+<a class="btn btn-orc" href="orcamento.html">Calcular valor</a>
 </section>
 
 <div class="container">
 
 <h2>🔧 Serviços</h2>
 <div class="grid">
-  <div class="card">Instalações elétricas</div>
-  <div class="card">Montagem de QDC</div>
-  <div class="card">Automação residencial</div>
-  <div class="card">Câmeras de segurança</div>
-  <div class="card">Interfones e alarmes</div>
-  <div class="card">Manutenção elétrica</div>
+<div class="card">Instalações elétricas</div>
+<div class="card">QDC e padrão</div>
+<div class="card">Câmeras de segurança</div>
+<div class="card">Automação residencial</div>
+<div class="card">Interfone e alarme</div>
+<div class="card">Manutenção</div>
 </div>
 
 <h2>📸 Trabalhos realizados</h2>
 <div class="grid galeria">
-  <img src="LINK1">
-  <img src="LINK2">
-  <img src="LINK3">
-  <img src="LINK4">
+<img src="COLOQUE_LINK_DA_SUA_FOTO1">
+<img src="COLOQUE_LINK_DA_SUA_FOTO2">
+<img src="COLOQUE_LINK_DA_SUA_FOTO3">
+<img src="COLOQUE_LINK_DA_SUA_FOTO4">
 </div>
 
 <h2>⭐ Diferenciais</h2>
 <div class="grid">
-  <div class="card">✔ Atendimento rápido</div>
-  <div class="card">✔ Serviço com garantia</div>
-  <div class="card">✔ Preço justo</div>
-  <div class="card">✔ Profissional qualificado</div>
+<div class="card">✔ Atendimento rápido</div>
+<div class="card">✔ Garantia de serviço</div>
+<div class="card">✔ Preço justo</div>
+<div class="card">✔ Profissional qualificado</div>
 </div>
 
 </div>
+
+<a class="whats-fixo" href="https://wa.me/5534992609206">💬</a>
 
 <footer>
 © 2026 RN Elétrica Automação e Segurança
