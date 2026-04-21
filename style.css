@@ -20,13 +20,15 @@ header{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:15px 40px;
+  padding:10px 40px; /* ajustado */
   box-shadow:0 2px 20px rgba(0,0,0,0.06);
   z-index:1000;
 }
 
+/* LOGO MAIOR E PROFISSIONAL */
 header img{
-  height:65px;
+  height:90px;
+  width:auto;
 }
 
 /* MENU */
@@ -53,7 +55,7 @@ nav a:hover::after{
   width:100%;
 }
 
-/* HERO */
+/* HERO COM SUA FOTO */
 .hero{
   height:90vh;
   display:flex;
@@ -63,8 +65,8 @@ nav a:hover::after{
   text-align:center;
 
   background:
-  linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
-  url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4');
+  linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.75)),
+  url('https://i.ibb.co/6J6Y0sK/foto-banner.jpg');
 
   background-size:cover;
   background-position:center;
@@ -96,7 +98,6 @@ nav a:hover::after{
   transition:0.3s;
 }
 
-/* BOTÃO AMARELO */
 .btn-primary{
   background:linear-gradient(45deg,#facc15,#eab308);
   color:#000;
@@ -108,7 +109,6 @@ nav a:hover::after{
   box-shadow:0 10px 25px rgba(250,204,21,0.5);
 }
 
-/* BOTÃO WHATS */
 .btn-whats{
   background:linear-gradient(45deg,#25D366,#1ebe5d);
   color:#fff;
@@ -253,12 +253,16 @@ footer{
   transform:translateY(0);
 }
 
-/* RESPONSIVO (MUITO IMPORTANTE) */
+/* RESPONSIVO */
 @media(max-width:768px){
 
   header{
     flex-direction:column;
     gap:10px;
+  }
+
+  header img{
+    height:70px;
   }
 
   nav a{
