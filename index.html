@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RN Elétrica</title>
-
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,19 +14,22 @@
   <nav>
     <a href="#">Início</a>
     <a href="#servicos">Serviços</a>
-    <a href="#galeria">Projetos</a>
+    <a href="#sobre">Sobre</a>
     <a href="#contato">Contato</a>
   </nav>
 </header>
 
 <section class="hero">
-  <h1>Especialista em Elétrica, Automação e Segurança</h1>
-  <p>Mais de 100 serviços realizados com qualidade e segurança</p>
+  <div class="hero-content">
+    <h1>Eletricista Profissional em Piumhi e Região</h1>
+    <p>Instalações seguras • Atendimento rápido • Garantia no serviço</p>
 
-  <a class="btn btn-primary" href="orcamento.html">Solicitar orçamento</a>
-  <a class="btn btn-whats" href="https://wa.me/5534992609206">Falar no WhatsApp</a>
+    <a class="btn btn-primary" href="orcamento.html">Solicitar orçamento</a>
+    <a class="btn btn-whats" href="https://wa.me/5534992609206">Chamar no WhatsApp</a>
+  </div>
 </section>
 
+<!-- SERVIÇOS -->
 <section class="container animar" id="servicos">
 <h2>Serviços</h2>
 
@@ -36,62 +38,30 @@
 <div class="card">QDC e padrão</div>
 <div class="card">Câmeras de segurança</div>
 <div class="card">Automação residencial</div>
-<div class="card">Redes e Wi-Fi</div>
-<div class="card">Controle de acesso</div>
 </div>
 </section>
 
-<section class="container animar" id="galeria">
-
-<h2>Projetos realizados</h2>
-
-<div style="text-align:center; margin-bottom:20px;">
-  <button onclick="filtrar('all')">Todos</button>
-  <button onclick="filtrar('eletrica')">Elétrica</button>
-  <button onclick="filtrar('cftv')">CFTV</button>
-  <button onclick="filtrar('automacao')">Automação</button>
-  <button onclick="filtrar('redes')">Redes</button>
-</div>
-
-<div class="grid galeria">
-
-<div class="card item eletrica">
-<img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789">
-<p>Instalação elétrica</p>
-</div>
-
-<div class="card item eletrica">
-<img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4">
-<p>Quadro elétrico</p>
-</div>
-
-<div class="card item cftv">
-<img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952">
-<p>Câmeras de segurança</p>
-</div>
-
-<div class="card item automacao">
-<img src="https://images.unsplash.com/photo-1558002038-1055907df827">
-<p>Automação</p>
-</div>
-
-<div class="card item redes">
-<img src="https://images.unsplash.com/photo-1598300053653-e3a95a1c5eaa">
-<p>Redes e Wi-Fi</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="container animar">
+<!-- SOBRE -->
+<section class="container animar" id="sobre">
 <h2>Sobre a empresa</h2>
 
-<p class="sobre">
-Atendimento profissional com qualidade, segurança e garantia em todos os serviços prestados.
-</p>
+<div class="sobre-box">
+  <img src="hero.jpg" alt="Profissional">
+  <div>
+    <p>
+      Atuamos com excelência em serviços elétricos, automação e segurança,
+      entregando soluções modernas e seguras para residências e empresas.
+    </p>
+
+    <p>
+      Nosso compromisso é garantir qualidade, agilidade e total satisfação do cliente.
+    </p>
+  </div>
+</div>
+
 </section>
 
+<!-- FOOTER -->
 <footer id="contato">
 <p>RN Elétrica Automação e Segurança</p>
 <p>WhatsApp: (34) 99260-9206</p>
@@ -100,18 +70,6 @@ Atendimento profissional com qualidade, segurança e garantia em todos os servi�
 <a class="whats" href="https://wa.me/5534992609206">💬</a>
 
 <script>
-function filtrar(tipo) {
-  let itens = document.querySelectorAll('.item');
-
-  itens.forEach(el => {
-    if (tipo === 'all') {
-      el.style.display = 'block';
-    } else {
-      el.style.display = el.classList.contains(tipo) ? 'block' : 'none';
-    }
-  });
-}
-
 document.addEventListener("DOMContentLoaded", function () {
   const elementos = document.querySelectorAll('.animar');
 
