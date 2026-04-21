@@ -1,4 +1,9 @@
-*{margin:0;padding:0;box-sizing:border-box;}
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
 body{
   font-family:'Segoe UI',sans-serif;
@@ -16,6 +21,7 @@ header{
   align-items:center;
   padding:15px 40px;
   box-shadow:0 2px 20px rgba(0,0,0,0.06);
+  z-index:1000;
 }
 
 header img{
@@ -28,6 +34,11 @@ nav a{
   text-decoration:none;
   color:#1e293b;
   font-weight:600;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#facc15;
 }
 
 /* HERO */
@@ -39,11 +50,13 @@ nav a{
   text-align:center;
 
   background:
-  linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),
+  linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.85)),
   url('https://raw.githubusercontent.com/raopuba-mac/rn-eletrica-site/main/hero.jpg');
 
   background-size:cover;
   background-position:center;
+  background-repeat:no-repeat;
+
   color:#fff;
 }
 
@@ -68,6 +81,7 @@ nav a{
   margin:10px;
   text-decoration:none;
   font-weight:bold;
+  transition:0.3s;
 }
 
 .btn-primary{
@@ -75,9 +89,19 @@ nav a{
   color:#000;
 }
 
+.btn-primary:hover{
+  transform:translateY(-2px);
+  box-shadow:0 5px 15px rgba(250,204,21,0.4);
+}
+
 .btn-whats{
   background:#25D366;
   color:#fff;
+}
+
+.btn-whats:hover{
+  transform:translateY(-2px);
+  box-shadow:0 5px 15px rgba(37,211,102,0.4);
 }
 
 /* CONTAINER */
@@ -87,6 +111,13 @@ nav a{
   padding:80px 20px;
 }
 
+/* TITULOS */
+h2{
+  text-align:center;
+  margin-bottom:40px;
+  font-size:28px;
+}
+
 /* GRID */
 .grid{
   display:grid;
@@ -94,11 +125,40 @@ nav a{
   gap:25px;
 }
 
+/* CARDS */
 .card{
   background:#fff;
   padding:25px;
   border-radius:15px;
   box-shadow:0 10px 30px rgba(0,0,0,0.05);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+/* DEPOIMENTOS */
+.depoimento{
+  text-align:center;
+}
+
+.depoimento p{
+  font-style:italic;
+  color:#475569;
+  margin-bottom:10px;
+}
+
+.depoimento span{
+  display:block;
+  margin-bottom:10px;
+  font-size:18px;
+}
+
+.depoimento h4{
+  font-size:14px;
+  color:#1e293b;
 }
 
 /* SOBRE */
@@ -131,6 +191,9 @@ footer{
   color:#fff;
   padding:15px;
   border-radius:50%;
+  text-decoration:none;
+  font-size:20px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
 }
 
 /* ANIMAÇÃO */
@@ -143,4 +206,36 @@ footer{
 .animar.ativo{
   opacity:1;
   transform:translateY(0);
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+
+  header{
+    flex-direction:column;
+    gap:10px;
+  }
+
+  nav a{
+    margin:0 10px;
+  }
+
+  .hero h1{
+    font-size:28px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .sobre-box{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .sobre-box img{
+    width:100%;
+    max-width:300px;
+  }
+
 }
