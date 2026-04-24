@@ -31,31 +31,42 @@ nav a{
   font-weight:600;
 }
 
-/* HERO */
 .hero{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:80px 40px;
+  padding:60px 40px;
   background:#0f172a;
   color:#fff;
   flex-wrap:wrap;
+  gap:40px;
 }
 
 .hero-text{
-  max-width:500px;
+  flex:1;
+  min-width:280px;
 }
 
 .hero-text h1{
-  font-size:42px;
+  font-size:38px;
+  line-height:1.2;
 }
 
 .hero-text p{
   margin:20px 0;
+  font-size:18px;
+  color:#cbd5f5;
+}
+
+.hero-img{
+  flex:1;
+  display:flex;
+  justify-content:center;
 }
 
 .hero-img img{
-  width:350px;
+  max-width:320px;
+  width:100%;
   border-radius:20px;
 }
 
@@ -92,7 +103,17 @@ nav a{
 .form-top input{
   padding:12px;
   border:none;
-  border-radius:5px;
+  border-radius:6px;
+  width:180px;
+}
+
+.form-top button{
+  background:#facc15;
+  border:none;
+  padding:12px 20px;
+  font-weight:bold;
+  cursor:pointer;
+  border-radius:6px;
 }
 
 .form-top button{
