@@ -1,4 +1,3 @@
-/* RESET */
 *{
   margin:0;
   padding:0;
@@ -13,64 +12,51 @@ body{
 
 /* HEADER */
 header{
-  position:sticky;
-  top:0;
-  background:#fff;
   display:flex;
   justify-content:space-between;
   align-items:center;
   padding:15px 40px;
+  background:#fff;
   box-shadow:0 2px 20px rgba(0,0,0,0.06);
-  z-index:1000;
 }
 
 header img{
-  height:125px;
+  height:80px;
 }
 
-/* MENU */
 nav a{
-  margin-left:25px;
+  margin-left:20px;
   text-decoration:none;
   color:#1e293b;
   font-weight:600;
-  transition:0.3s;
-}
-
-nav a:hover{
-  color:#facc15;
 }
 
 /* HERO */
 .hero{
-  height:90vh;
   display:flex;
-  justify-content:center;
   align-items:center;
-  text-align:center;
-
-  background:
-  linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.85)),
-  url('https://raw.githubusercontent.com/raopuba-mac/rn-eletrica-site/main/hero.jpg');
-
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
-
+  justify-content:space-between;
+  padding:80px 40px;
+  background:#0f172a;
   color:#fff;
+  flex-wrap:wrap;
 }
 
-.hero-content{
-  max-width:700px;
+.hero-text{
+  max-width:500px;
 }
 
-.hero h1{
+.hero-text h1{
   font-size:42px;
 }
 
-.hero p{
+.hero-text p{
   margin:20px 0;
-  font-size:18px;
+}
+
+.hero-img img{
+  width:350px;
+  border-radius:20px;
 }
 
 /* BOTÕES */
@@ -78,10 +64,9 @@ nav a:hover{
   display:inline-block;
   padding:14px 28px;
   border-radius:10px;
-  margin:10px;
+  margin:10px 10px 0 0;
   text-decoration:none;
   font-weight:bold;
-  transition:0.3s;
 }
 
 .btn-primary{
@@ -89,19 +74,33 @@ nav a:hover{
   color:#000;
 }
 
-.btn-primary:hover{
-  transform:translateY(-2px);
-  box-shadow:0 5px 15px rgba(250,204,21,0.4);
-}
-
 .btn-whats{
   background:#25D366;
   color:#fff;
 }
 
-.btn-whats:hover{
-  transform:translateY(-2px);
-  box-shadow:0 5px 15px rgba(37,211,102,0.4);
+/* FORM */
+.form-top{
+  background:#dc2626;
+  padding:20px;
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.form-top input{
+  padding:12px;
+  border:none;
+  border-radius:5px;
+}
+
+.form-top button{
+  background:#facc15;
+  border:none;
+  padding:12px 20px;
+  font-weight:bold;
+  cursor:pointer;
 }
 
 /* CONTAINER */
@@ -111,11 +110,9 @@ nav a:hover{
   padding:80px 20px;
 }
 
-/* TITULOS */
 h2{
   text-align:center;
   margin-bottom:40px;
-  font-size:28px;
 }
 
 /* GRID */
@@ -125,18 +122,27 @@ h2{
   gap:25px;
 }
 
-/* CARDS */
+/* CARD */
 .card{
   background:#fff;
   padding:25px;
   border-radius:15px;
   box-shadow:0 10px 30px rgba(0,0,0,0.05);
-  transition:0.3s;
 }
 
-.card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+/* DESTAQUE */
+.destaque{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:80px 40px;
+  background:#fff;
+  flex-wrap:wrap;
+}
+
+.destaque img{
+  width:300px;
+  border-radius:15px;
 }
 
 /* DEPOIMENTOS */
@@ -144,34 +150,9 @@ h2{
   text-align:center;
 }
 
-.depoimento p{
-  font-style:italic;
-  color:#475569;
-  margin-bottom:10px;
-}
-
 .depoimento span{
   display:block;
-  margin-bottom:10px;
-  font-size:18px;
-}
-
-.depoimento h4{
-  font-size:14px;
-  color:#1e293b;
-}
-
-/* SOBRE */
-.sobre-box{
-  display:flex;
-  gap:30px;
-  align-items:center;
-  flex-wrap:wrap;
-}
-
-.sobre-box img{
-  width:300px;
-  border-radius:15px;
+  margin-top:10px;
 }
 
 /* FOOTER */
@@ -191,51 +172,23 @@ footer{
   color:#fff;
   padding:15px;
   border-radius:50%;
-  text-decoration:none;
-  font-size:20px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.2);
-}
-
-/* ANIMAÇÃO */
-.animar{
-  opacity:0;
-  transform:translateY(40px);
-  transition:0.8s;
-}
-
-.animar.ativo{
-  opacity:1;
-  transform:translateY(0);
 }
 
 /* RESPONSIVO */
 @media(max-width:768px){
 
-  header{
-    flex-direction:column;
-    gap:10px;
-  }
+.hero{
+  flex-direction:column;
+  text-align:center;
+}
 
-  nav a{
-    margin:0 10px;
-  }
+.hero-img img{
+  margin-top:20px;
+}
 
-  .hero h1{
-    font-size:28px;
-  }
-
-  .hero p{
-    font-size:16px;
-  }
-
-  .sobre-box{
-    flex-direction:column;
-    text-align:center;
-  }
-
-  .sobre-box img{
-    width:100%;
-    max-width:300px;
-  }
+.destaque{
+  flex-direction:column;
+  text-align:center;
+}
 
 }
